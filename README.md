@@ -1,5 +1,3 @@
-# OrderSystem
-
 # FUNCTIONAL VIEW:
  - In this project you will learn to build login, user registration, complete shopping cart navigation flow, order closing flow, user profile screen with photo upload both by camera and gallery.
 
