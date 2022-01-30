@@ -3,12 +3,22 @@ package com.eduardomacedo.cursomc.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+/*
+ * O Serializable é uma interface que diz que os objetos dessa classe poderão ser convertidos para uma sequencia de bytes
+ * para que os objetos possam ser gravados em arquivos, trafegar em rede, etc.
+ * */
+
+@Entity
 public class Categoria implements Serializable {
-	/*
-	 * O Serializable é uma interface que diz que os objetos dessa classe poderão ser convertidos para uma sequencia de bytes
-	 * para que os objetos possam ser gravados em arquivos, trafegar em rede, etc.
-	 * */
+	
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 		
@@ -19,7 +29,6 @@ public class Categoria implements Serializable {
 	}
 	public Categoria() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
 		return id;
